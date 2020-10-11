@@ -1,4 +1,4 @@
-package tests;
+package testsOnCloud;
 
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -17,14 +17,14 @@ import testSetUp.TestBase;
 import testSetUpGCP.TestBaseGCP;
 
 
-public class EndToEnd_RegLogSrchPurchConfrm extends TestBaseGCP{
+public class CloudEndToEnd_RegLogSrchPurchConfrm extends TestBaseGCP{
 	HomePage hpObj;
 	RegistrationPage regPageObj;
 	LoginPage loginPageObj;
 	PurchasePage purchaePageObj;
 	ShoppingCartPage shoppingPageObj;
 	CheckOutPage chechOutPageObj;
-	static Logger log;
+	static Logger log ;
 
 	
 	
@@ -53,7 +53,7 @@ public class EndToEnd_RegLogSrchPurchConfrm extends TestBaseGCP{
 	@BeforeClass
 	public void setUpRegistrationTestCases()
 	{
-		log = Logger.getLogger(EndToEnd_RegLogSrchPurchConfrm.class.getName());
+		log = Logger.getLogger(CloudEndToEnd_RegLogSrchPurchConfrm.class.getName());
 		hpObj = new HomePage(driver);
 		regPageObj = new RegistrationPage(driver);
 		loginPageObj = new LoginPage(driver);
@@ -123,11 +123,6 @@ public class EndToEnd_RegLogSrchPurchConfrm extends TestBaseGCP{
 		chechOutPageObj.pressThirdContinue(driver);
 		chechOutPageObj.pressFourthContinue(driver);
 		chechOutPageObj.confirmOrder(driver);
-		
 		Assert.assertTrue(chechOutPageObj.checkSuccOrder(driver));
 	}
-	
-	
-
-
 }
