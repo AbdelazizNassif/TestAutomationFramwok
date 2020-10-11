@@ -4,5 +4,5 @@ This FW is different in its design adding more layer abstraction and more modula
 Features:
 
 - better handling for locating elements with more abstraction levels and more low level services for the application layer (test cases).
-- Running //el tests using slelenium grid on zalenium grid inside kubernetes cluster on google clod platform.
+- Running //el tests with slelenium grid on zalenium grid using kubernetes cluster inside google clod platform.
 - logging is implemented using log4j.
